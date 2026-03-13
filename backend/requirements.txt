@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+google-generativeai
+python-dotenv
+python-multipart
+fuzzywuzzy
+python-levenshtein
+googletrans
