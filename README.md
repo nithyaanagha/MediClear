@@ -31,9 +31,9 @@ ClearScript bridges the gap between doctors and patients by using AI to translat
 
 ## 👥 Team: 
 - **Nithyaanagha M** 
-- **Adhithya Sriram** Frontend Lead (UI/UX, State Management, API Integration)
-- **Manasa M** Backend Lead (OCR Pipeline, Medicine Parser, AI Prompting)
-- **Shreya K** Data & Testing (Dataset cleaning, Manual Input Fallbacks)
+- **Adhithya Sriram**
+- **Manasa M** 
+- **Shreya K** 
 
 ---
 
