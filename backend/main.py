@@ -51,6 +51,7 @@ def load_medicine_db():
         with open(path, "r") as f:
             print (f)
             content = f.read()
+            #Parsing content
             data = json.loads(content)
             # This confirms the "Medicine Database" phase of your workflow
             print(f"✅ SUCCESS: Loaded {len(data)} medicines.")
