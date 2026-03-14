@@ -9,6 +9,7 @@ import MedicineCard from "@/components/MedicineCard";
 export default function ResultsPage() {
   const router = useRouter();
   const [results, setResults] = useState<any[]>([]);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const stored = sessionStorage.getItem("mediclear_results");
@@ -16,10 +17,25 @@ export default function ResultsPage() {
       router.push("/");
       return;
     }
-    setResults(JSON.parse(stored));
+    const parsed = JSON.parse(stored);
+    setResults(parsed);
+    setLoaded(true);
   }, [router]);
 
-  if (results.length === 0) return null;
+  if (!loaded) return null;
+
+  if (results.length === 0) return (
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center gap-4 px-6">
+      <Pill className="w-14 h-14 text-sky-300" />
+      <h2 className="text-xl font-bold text-gray-700 text-center">No medicines found</h2>
+      <p className="text-sm text-gray-400 text-center max-w-xs">
+        None of the detected medicines matched our database. Try typing the medicine names manually on the home screen.
+      </p>
+      <Button onClick={() => router.push("/")} className="mt-2 bg-sky-500 hover:bg-sky-600 text-white rounded-2xl">
+        Try Again
+      </Button>
+    </div>
+  );
 
   const totalBrandCost = results.reduce((sum, r) => sum + (r.brand_price || 0), 0);
   const totalGenericCost = results.reduce((sum, r) => {

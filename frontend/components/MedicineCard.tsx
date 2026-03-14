@@ -1,25 +1,24 @@
 "use client";
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp, IndianRupee } from "lucide-react";
+import { ChevronDown, ChevronUp, IndianRupee, Volume2 } from "lucide-react";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 export default function MedicineCard({ medicine, index }: { medicine: any; index: number }) {
   const [showAlternatives, setShowAlternatives] = useState(false);
 
-// ADD HERE ↓
   const speakInstructions = () => {
-  const text = `
-    ${medicine.brand_name}. 
-    ${medicine.purpose_simple}. 
-    How to take: ${medicine.how_to_take?.join(". ")}. 
-    Warning: ${medicine.warnings}
-  `;
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-IN";
-  utterance.rate = 0.9;
-  window.speechSynthesis.speak(utterance);
-};
+    const text = `
+      ${medicine.brand_name}. 
+      ${medicine.purpose_simple}. 
+      How to take: ${medicine.how_to_take?.join(". ")}. 
+      Warning: ${medicine.warnings}
+    `;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-IN";
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  };
   const cheapestAlt = medicine.alternatives?.[0];
   const savings = cheapestAlt ? (medicine.brand_price || 0) - cheapestAlt.price : 0;
   const savingsPct = medicine.brand_price ? Math.round((savings / medicine.brand_price) * 100) : 0;
@@ -38,15 +37,24 @@ export default function MedicineCard({ medicine, index }: { medicine: any; index
             <h2 className="text-lg font-bold text-gray-900">{medicine.brand_name}</h2>
             <p className="text-xs text-gray-400 mt-0.5">{medicine.generic_name}</p>
           </div>
-          {medicine.brand_price && (
-            <div className="text-right shrink-0">
-              <div className="flex items-center gap-0.5 text-gray-400 text-xs">
-                <IndianRupee className="w-3 h-3" />
-                <span>{medicine.brand_price}</span>
+          <div className="flex items-center gap-2">
+            {medicine.brand_price && (
+              <div className="text-right shrink-0">
+                <div className="flex items-center gap-0.5 text-gray-400 text-xs">
+                  <IndianRupee className="w-3 h-3" />
+                  <span>{medicine.brand_price}</span>
+                </div>
+                <span className="text-xs text-gray-300">brand</span>
               </div>
-              <span className="text-xs text-gray-300">brand</span>
-            </div>
-          )}
+            )}
+            <button
+              onClick={speakInstructions}
+              className="text-gray-300 hover:text-sky-500 transition-colors"
+              title="Read aloud"
+            >
+              <Volume2 className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Purpose */}

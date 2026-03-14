@@ -20,3 +20,13 @@ export async function simplifyMedicines(medicines: any[], lang: string = "en") {
   if (!res.ok) throw new Error("Simplification failed");
   return res.json();
 }
+
+export async function analyzeText(text: string, lang: string = "en") {
+  const res = await fetch(`${BACKEND_URL}/analyze-text?lang=${lang}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text }),
+  });
+  if (!res.ok) throw new Error("Text analysis failed");
+  return res.json();
+}

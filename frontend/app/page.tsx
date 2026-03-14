@@ -7,7 +7,7 @@ import { Upload, Camera, FileText, Loader2, Pill } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { analyzePrescription, simplifyMedicines } from "@/lib/api";
+import { analyzePrescription, analyzeText, simplifyMedicines } from "@/lib/api";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
@@ -62,7 +62,6 @@ export default function HomePage() {
       const stepInterval = setInterval(() => {
         setCurrentStep((prev) => {
           if (prev < STEPS.length - 1) return prev + 1;
-          clearInterval(stepInterval);
           return prev;
         });
       }, 900);
@@ -71,16 +70,21 @@ export default function HomePage() {
       if (file) {
         analyzeResult = await analyzePrescription(file, lang);
       } else {
-        // Manual text: create a text blob and send
-        const textBlob = new Blob([manualText], { type: "text/plain" });
-        const textFile = new File([textBlob], "prescription.txt", { type: "text/plain" });
-        analyzeResult = await analyzePrescription(textFile, lang);
+        // Manual text: use dedicated text endpoint (not Gemini Vision)
+        analyzeResult = await analyzeText(manualText, lang);
       }
 
       clearInterval(stepInterval);
       setCurrentStep(STEPS.length - 1);
 
       const foundMeds = analyzeResult.results.filter((r: any) => r.status === "found");
+
+      if (foundMeds.length === 0) {
+        setError("No medicines from our database were detected. Try typing medicine names (e.g. \"Dolo 650\") manually.");
+        setLoading(false);
+        return;
+      }
+
       const medicinesForSimplify = foundMeds.map((r: any) => ({
         brand_name: r.data.brand_name,
         brand_price: r.data.brand_price,
@@ -96,11 +100,13 @@ export default function HomePage() {
       const finalData = simplifyResult.instructions.map((inst: any, i: number) => ({
         ...inst,
         brand_price: medicinesForSimplify[i]?.brand_price,
+        generic_name: medicinesForSimplify[i]?.generic_name,
         alternatives: medicinesForSimplify[i]?.alternatives,
       }));
 
       // Store in sessionStorage and navigate
       sessionStorage.setItem("mediclear_results", JSON.stringify(finalData));
+      setLoading(false);
       router.push("/results");
     } catch (err) {
       setError("Something went wrong. Please try again or use text input.");
