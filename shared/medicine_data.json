@@ -1,1186 +1,1286 @@
 [
     {
-        "brand_name": "Augmentin 625",
-        "generic_name": "Amoxicillin + Clavulanic Acid",
-        "purpose": "Bacterial infections",
-        "alternatives": [
-            {
-                "name": "Amoxyclav 625",
-                "price": 95
-            },
-            {
-                "name": "Moxikind-CV",
-                "price": 105
-            }
-        ]
-    },
-    {
-        "brand_name": "Dolo 650",
-        "generic_name": "Paracetamol",
-        "purpose": "Fever and Pain",
-        "alternatives": [
-            {
-                "name": "Paracip 650",
-                "price": 15
-            },
-            {
-                "name": "Crocin 650",
-                "price": 18
-            }
-        ]
-    },
-    {
-        "brand_name": "Pantop 40",
-        "generic_name": "Pantoprazole",
-        "purpose": "Acidity and Heartburn",
-        "alternatives": [
-            {
-                "name": "Pan 40",
-                "price": 60
-            },
-            {
-                "name": "Pantaloc",
-                "price": 55
-            }
-        ]
-    },
-    {
-        "brand_name": "Pan-D",
-        "generic_name": "Pantoprazole + Domperidone",
-        "purpose": "Acid Reflux and Nausea",
-        "alternatives": [
-            {
-                "name": "Dompan",
-                "price": 85
-            },
-            {
-                "name": "Pantosec-D",
-                "price": 90
-            }
-        ]
-    },
-    {
-        "brand_name": "Zifi 200",
-        "generic_name": "Cefixime",
-        "purpose": "Bacterial infections (Typhoid/UTI)",
-        "alternatives": [
-            {
-                "name": "Taxim-O 200",
-                "price": 75
-            },
-            {
-                "name": "Ceptra 200",
-                "price": 80
-            }
-        ]
-    },
-    {
-        "brand_name": "Azithral 500",
-        "generic_name": "Azithromycin",
-        "purpose": "Respiratory infections",
-        "alternatives": [
-            {
-                "name": "Azee 500",
-                "price": 70
-            },
-            {
-                "name": "Azicip 500",
-                "price": 72
-            }
-        ]
-    },
-    {
-        "brand_name": "Limcee",
-        "generic_name": "Vitamin C",
-        "purpose": "Immunity booster",
-        "alternatives": [
-            {
-                "name": "Celin",
-                "price": 15
-            }
-        ]
-    },
-    {
-        "brand_name": "Telma 40",
-        "generic_name": "Telmisartan",
-        "purpose": "High Blood Pressure",
-        "alternatives": [
-            {
-                "name": "Telmikind 40",
-                "price": 35
-            },
-            {
-                "name": "Telsar 40",
-                "price": 40
-            }
-        ]
-    },
-    {
-        "brand_name": "Glycomet 500",
-        "generic_name": "Metformin",
-        "purpose": "Type 2 Diabetes",
-        "alternatives": [
-            {
-                "name": "Metsmall 500",
-                "price": 12
-            },
-            {
-                "name": "Obimet 500",
-                "price": 14
-            }
-        ]
-    },
-    {
-        "brand_name": "Combiflam",
-        "generic_name": "Ibuprofen + Paracetamol",
-        "purpose": "Muscle pain and Inflammation",
-        "alternatives": [
-            {
-                "name": "Ibugesic Plus",
-                "price": 25
-            }
-        ]
-    },
-    {
-        "brand_name": "Montair LC",
-        "generic_name": "Montelukast + Levocetirizine",
-        "purpose": "Allergies and Asthma",
-        "alternatives": [
-            {
-                "name": "Telekast L",
-                "price": 110
-            },
-            {
-                "name": "Monticope",
-                "price": 95
-            }
-        ]
-    },
-    {
-        "brand_name": "Shelcal 500",
-        "generic_name": "Calcium + Vitamin D3",
-        "purpose": "Bone health",
-        "alternatives": [
-            {
-                "name": "Gemcal",
-                "price": 75
-            }
-        ]
-    },
-    {
-        "brand_name": "Becosules",
-        "generic_name": "Vitamin B Complex",
-        "purpose": "Nutritional deficiency",
-        "alternatives": [
-            {
-                "name": "B-Complex",
-                "price": 30
-            }
-        ]
-    },
-    {
-        "brand_name": "Voveran SR 100",
-        "generic_name": "Diclofenac",
-        "purpose": "Severe Pain/Arthritis",
-        "alternatives": [
-            {
-                "name": "Diclogesic",
-                "price": 45
-            }
-        ]
-    },
-    {
-        "brand_name": "Amoxyclav 625",
-        "generic_name": "Amoxicillin + Clavulanic Acid",
-        "purpose": "Bacterial infections",
-        "alternatives": [
-            {
-                "name": "Advent 625",
-                "price": 110
-            }
-        ]
-    },
-    {
-        "brand_name": "Okacet",
-        "generic_name": "Cetirizine",
-        "purpose": "Cold and Allergy",
-        "alternatives": [
-            {
-                "name": "Zyrtec",
-                "price": 18
-            }
-        ]
-    },
-    {
-        "brand_name": "Allegra 120",
-        "generic_name": "Fexofenadine",
-        "purpose": "Seasonal Allergies",
-        "alternatives": [
-            {
-                "name": "Fexigra 120",
-                "price": 85
-            }
-        ]
-    },
-    {
-        "brand_name": "Wikoryl",
-        "generic_name": "Phenylephrine + CP + Paracetamol",
-        "purpose": "Common Cold",
-        "alternatives": [
-            {
-                "name": "Solvin Cold",
-                "price": 45
-            }
-        ]
-    },
-    {
-        "brand_name": "Digene",
-        "generic_name": "Antacids",
-        "purpose": "Stomach gas and acidity",
-        "alternatives": [
-            {
-                "name": "Gelusil",
-                "price": 15
-            }
-        ]
-    },
-    {
-        "brand_name": "Clavam 625",
-        "generic_name": "Amoxicillin + Clavulanic Acid",
-        "purpose": "Bacterial infections",
-        "alternatives": [
-            {
-                "name": "Moxforce CV",
-                "price": 99
-            }
-        ]
-    },
-    {
-        "brand_name": "Omez 20",
-        "generic_name": "Omeprazole",
-        "purpose": "Heartburn",
-        "alternatives": [
-            {
-                "name": "Omee",
-                "price": 35
-            }
-        ]
-    },
-    {
-        "brand_name": "Taxim-O 200",
-        "generic_name": "Cefixime",
-        "purpose": "Bacterial infections",
-        "alternatives": [
-            {
-                "name": "Zifi 200",
-                "price": 85
-            }
-        ]
-    },
-    {
-        "brand_name": "Atorva 10",
-        "generic_name": "Atorvastatin",
-        "purpose": "High Cholesterol",
-        "alternatives": [
-            {
-                "name": "Lipikind 10",
-                "price": 45
-            },
-            {
-                "name": "Tonact 10",
-                "price": 50
-            }
-        ]
-    },
-    {
-        "brand_name": "Clexane",
-        "generic_name": "Enoxaparin",
-        "purpose": "Blood Clots",
-        "alternatives": [
-            {
-                "name": "Lupisulin",
-                "price": 450
-            }
-        ]
-    },
-    {
-        "brand_name": "Jalra M 50/500",
-        "generic_name": "Vildagliptin + Metformin",
-        "purpose": "Diabetes",
-        "alternatives": [
-            {
-                "name": "Galvus Met",
-                "price": 180
-            }
-        ]
-    },
-    {
-        "brand_name": "Arkamin",
-        "generic_name": "Clonidine",
-        "purpose": "Hypertension",
-        "alternatives": [
-            {
-                "name": "Clonitrex",
-                "price": 40
-            }
-        ]
-    },
-    {
-        "brand_name": "Ecosprin 75",
-        "generic_name": "Aspirin",
-        "purpose": "Prevention of Heart Attack",
-        "alternatives": [
-            {
-                "name": "Asat-75",
-                "price": 5
-            }
-        ]
-    },
-    {
-        "brand_name": "Metosartan 50",
-        "generic_name": "Telmisartan + Metoprolol",
-        "purpose": "Blood Pressure",
-        "alternatives": [
-            {
-                "name": "Telma AM",
-                "price": 90
-            }
-        ]
-    },
-    {
-        "brand_name": "Glimisave M2",
-        "generic_name": "Glimepiride + Metformin",
-        "purpose": "Diabetes",
-        "alternatives": [
-            {
-                "name": "GP2",
-                "price": 65
-            }
-        ]
-    },
-    {
-        "brand_name": "Cipox 500",
-        "generic_name": "Ciprofloxacin",
-        "purpose": "Bacterial infection",
-        "alternatives": [
-            {
-                "name": "Ciplox 500",
-                "price": 40
-            }
-        ]
-    },
-    {
-        "brand_name": "Levipil 500",
-        "generic_name": "Levetiracetam",
-        "purpose": "Epilepsy/Seizures",
-        "alternatives": [
-            {
-                "name": "Levera 500",
-                "price": 110
-            }
-        ]
-    },
-    {
-        "brand_name": "Meftal-Spas",
-        "generic_name": "Mefenamic Acid + Dicyclomine",
-        "purpose": "Menstrual pain/Cramps",
-        "alternatives": [
-            {
-                "name": "Cyclopam",
-                "price": 35
-            }
-        ]
-    },
-    {
-        "brand_name": "Liv.52",
-        "generic_name": "Herbal",
-        "purpose": "Liver health",
-        "alternatives": [
-            {
-                "name": "Aptivate",
-                "price": 90
-            }
-        ]
-    },
-    {
-        "brand_name": "Rantac 150",
-        "generic_name": "Ranitidine",
-        "purpose": "Acid suppression",
-        "alternatives": [
-            {
-                "name": "Zinetac 150",
-                "price": 20
-            }
-        ]
-    },
-    {
-        "brand_name": "Aciloc 150",
-        "generic_name": "Ranitidine",
-        "purpose": "Acidity",
-        "alternatives": [
-            {
-                "name": "Rantac 150",
-                "price": 18
-            }
-        ]
-    },
-    {
-        "brand_name": "Daflon 500",
-        "generic_name": "Diosmin",
-        "purpose": "Varicose veins/Piles",
-        "alternatives": [
-            {
-                "name": "Venusmin",
-                "price": 120
-            }
-        ]
-    },
-    {
-        "brand_name": "Duphaston",
-        "generic_name": "Dydrogesterone",
-        "purpose": "Hormonal therapy",
-        "alternatives": [
-            {
-                "name": "Dydroboon",
-                "price": 450
-            }
-        ]
-    },
-    {
-        "brand_name": "Thyronorm 50",
-        "generic_name": "Thyroxine",
-        "purpose": "Hypothyroidism",
-        "alternatives": [
-            {
-                "name": "Lethrox 50",
-                "price": 80
-            }
-        ]
-    },
-    {
-        "brand_name": "Eutirox 50",
-        "generic_name": "Thyroxine",
-        "purpose": "Thyroid",
-        "alternatives": [
-            {
-                "name": "Thyronorm",
-                "price": 95
-            }
-        ]
-    },
-    {
-        "brand_name": "Folvite",
-        "generic_name": "Folic Acid",
-        "purpose": "Anemia/Pregnancy",
-        "alternatives": [
-            {
-                "name": "Folicap",
-                "price": 25
-            }
-        ]
-    },
-    {
-        "brand_name": "Autrin",
-        "generic_name": "Iron + Folic Acid",
-        "purpose": "Iron deficiency",
-        "alternatives": [
-            {
-                "name": "Dexorange",
-                "price": 140
-            }
-        ]
-    },
-    {
-        "brand_name": "Zevit",
-        "generic_name": "Multivitamins",
-        "purpose": "Daily supplement",
-        "alternatives": [
-            {
-                "name": "Zincovit",
-                "price": 105
-            }
-        ]
-    },
-    {
-        "brand_name": "Evion 400",
-        "generic_name": "Vitamin E",
-        "purpose": "Skin and Hair health",
-        "alternatives": [
-            {
-                "name": "E-Cap",
-                "price": 30
-            }
-        ]
-    },
-    {
-        "brand_name": "Calpol 500",
-        "generic_name": "Paracetamol",
-        "purpose": "Fever",
-        "alternatives": [
-            {
-                "name": "Dolo 500",
-                "price": 12
-            }
-        ]
-    },
-    {
-        "brand_name": "Deriphyllin",
-        "generic_name": "Etophylline + Theophylline",
-        "purpose": "Asthma/COPD",
-        "alternatives": [
-            {
-                "name": "Theobid",
-                "price": 40
-            }
-        ]
-    },
-    {
-        "brand_name": "Asthalin",
-        "generic_name": "Salbutamol",
-        "purpose": "Breathing difficulty",
-        "alternatives": [
-            {
-                "name": "Salbair",
-                "price": 30
-            }
-        ]
-    },
-    {
-        "brand_name": "Ascoril LS",
-        "generic_name": "Ambroxol + Levosalbutamol",
-        "purpose": "Cough with mucus",
-        "alternatives": [
-            {
-                "name": "Solvin LS",
-                "price": 95
-            }
-        ]
-    },
-    {
-        "brand_name": "Grilinctus",
-        "generic_name": "Dextromethorphan",
-        "purpose": "Dry Cough",
-        "alternatives": [
-            {
-                "name": "Benadryl DR",
-                "price": 110
-            }
-        ]
-    },
-    {
-        "brand_name": "Cremaffin",
-        "generic_name": "Milk of Magnesia",
-        "purpose": "Constipation",
-        "alternatives": [
-            {
-                "name": "Laxogel",
-                "price": 150
-            }
-        ]
-    },
-    {
-        "brand_name": "Dulcolax",
-        "generic_name": "Bisacodyl",
-        "purpose": "Laxative",
-        "alternatives": [
-            {
-                "name": "Gerbisa",
-                "price": 10
-            }
-        ]
-    },
-    {
-        "brand_name": "Lipitor 10",
-        "generic_name": "Atorvastatin",
-        "purpose": "High Cholesterol",
-        "alternatives": [
-            {
-                "name": "Atorva 10",
-                "price": 45
-            },
-            {
-                "name": "Lipikind 10",
-                "price": 42
-            }
-        ]
-    },
-    {
-        "brand_name": "Istamet 50/500",
-        "generic_name": "Sitagliptin + Metformin",
-        "purpose": "Type 2 Diabetes",
-        "alternatives": [
-            {
-                "name": "Sitcom M",
-                "price": 160
-            },
-            {
-                "name": "Zita-Met",
-                "price": 145
-            }
-        ]
-    },
-    {
-        "brand_name": "Januvia 100",
-        "generic_name": "Sitagliptin",
-        "purpose": "Blood Sugar Control",
-        "alternatives": [
-            {
-                "name": "Zita 100",
-                "price": 110
-            },
-            {
-                "name": "Sitaglo 100",
-                "price": 105
-            }
-        ]
-    },
-    {
-        "brand_name": "Concor 5",
-        "generic_name": "Bisoprolol",
-        "purpose": "Hypertension/Heart Rate",
-        "alternatives": [
-            {
-                "name": "Bisoheart 5",
-                "price": 45
-            },
-            {
-                "name": "Zebeta 5",
-                "price": 50
-            }
-        ]
-    },
-    {
-        "brand_name": "Amlokind 5",
-        "generic_name": "Amlodipine",
-        "purpose": "Blood Pressure",
-        "alternatives": [
-            {
-                "name": "Amlong 5",
-                "price": 25
-            },
-            {
-                "name": "Stamlo 5",
-                "price": 28
-            }
-        ]
-    },
-    {
-        "brand_name": "Emanzen-D",
-        "generic_name": "Serratiopeptidase + Diclofenac",
-        "purpose": "Pain and Swelling",
-        "alternatives": [
-            {
-                "name": "Serohex-D",
-                "price": 75
-            },
-            {
-                "name": "Bidanzen Forte",
-                "price": 70
-            }
-        ]
-    },
-    {
-        "brand_name": "Chymoral Forte",
-        "generic_name": "Trypsin Chymotrypsin",
-        "purpose": "Post-surgery healing/Edema",
-        "alternatives": [
-            {
-                "name": "Trypsin-D",
-                "price": 210
-            }
-        ]
-    },
-    {
-        "brand_name": "Kenacort 40",
-        "generic_name": "Triamcinolone",
-        "purpose": "Severe Allergies/Arthritis",
-        "alternatives": [
-            {
-                "name": "Tricort 40",
-                "price": 120
-            }
-        ]
-    },
-    {
-        "brand_name": "Wysolone 10",
-        "generic_name": "Prednisolone",
-        "purpose": "Steroid for Inflammation",
-        "alternatives": [
-            {
-                "name": "Predmet 10",
-                "price": 12
-            }
-        ]
-    },
-    {
-        "brand_name": "Defcort 6",
-        "generic_name": "Deflazacort",
-        "purpose": "Autoimmune conditions",
-        "alternatives": [
-            {
-                "name": "Defnalone 6",
-                "price": 85
-            }
-        ]
-    },
-    {
-        "brand_name": "Atarax 25",
-        "generic_name": "Hydroxyzine",
-        "purpose": "Itching and Anxiety",
-        "alternatives": [
-            {
-                "name": "Hicope 25",
-                "price": 45
-            }
-        ]
-    },
-    {
-        "brand_name": "Avil 25",
-        "generic_name": "Pheniramine Maleate",
-        "purpose": "Allergic reactions",
-        "alternatives": [
-            {
-                "name": "Cadistin",
-                "price": 10
-            }
-        ]
-    },
-    {
-        "brand_name": "Stemetil 5",
-        "generic_name": "Prochlorperazine",
-        "purpose": "Vertigo and Vomiting",
-        "alternatives": [
-            {
-                "name": "Vomitil",
-                "price": 35
-            }
-        ]
-    },
-    {
-        "brand_name": "Vertin 16",
-        "generic_name": "Betahistine",
-        "purpose": "Meniere's Disease (Dizziness)",
-        "alternatives": [
-            {
-                "name": "Betavert 16",
-                "price": 80
-            }
-        ]
-    },
-    {
-        "brand_name": "Nexpro 40",
-        "generic_name": "Esomeprazole",
-        "purpose": "Severe Acid Reflux",
-        "alternatives": [
-            {
-                "name": "Esomac 40",
-                "price": 95
-            },
-            {
-                "name": "Sompraz 40",
-                "price": 105
-            }
-        ]
-    },
-    {
-        "brand_name": "Mucaine Gel",
-        "generic_name": "Oxetacaine + Antacids",
-        "purpose": "Stomach Ulcer pain",
-        "alternatives": [
-            {
-                "name": "Ulsigel",
-                "price": 130
-            }
-        ]
-    },
-    {
-        "brand_name": "Duphalac",
-        "generic_name": "Lactulose",
-        "purpose": "Chronic Constipation",
-        "alternatives": [
-            {
-                "name": "Looz",
-                "price": 180
-            },
-            {
-                "name": "Livoluk",
-                "price": 170
-            }
-        ]
-    },
-    {
-        "brand_name": "Enterogermina",
-        "generic_name": "Bacillus clausii",
-        "purpose": "Probiotic for Diarrhea",
-        "alternatives": [
-            {
-                "name": "Ecogermina",
-                "price": 45
-            }
-        ]
-    },
-    {
-        "brand_name": "Loperamide",
-        "generic_name": "Loperamide",
-        "purpose": "Loose Motion",
-        "alternatives": [
-            {
-                "name": "Imodium",
-                "price": 20
-            },
-            {
-                "name": "Lopamide",
-                "price": 15
-            }
-        ]
-    },
-    {
-        "brand_name": "Metrogyl 400",
-        "generic_name": "Metronidazole",
-        "purpose": "Stomach Infections",
-        "alternatives": [
-            {
-                "name": "Flagyl 400",
-                "price": 22
-            }
-        ]
-    },
-    {
-        "brand_name": "Norflox TZ",
-        "generic_name": "Norfloxacin + Tinidazole",
-        "purpose": "Diarrhea and Dysentery",
-        "alternatives": [
-            {
-                "name": "Gramogyl",
-                "price": 75
-            }
-        ]
-    },
-    {
-        "brand_name": "Sporlac DS",
-        "generic_name": "Lactic Acid Bacillus",
-        "purpose": "Gut health",
-        "alternatives": [
-            {
-                "name": "Lacidofil",
-                "price": 50
-            }
-        ]
-    },
-    {
-        "brand_name": "Taxim 500 Injection",
-        "generic_name": "Cefotaxime",
-        "purpose": "Severe Hospital Infections",
-        "alternatives": [
-            {
-                "name": "Lyforan",
-                "price": 35
-            }
-        ]
-    },
-    {
-        "brand_name": "Monocef 1g",
-        "generic_name": "Ceftriaxone",
-        "purpose": "Broad spectrum antibiotic",
-        "alternatives": [
-            {
-                "name": "Xone 1g",
-                "price": 55
-            }
-        ]
-    },
-    {
-        "brand_name": "Meronem 1g",
-        "generic_name": "Meropenem",
-        "purpose": "Critical Infections",
-        "alternatives": [
-            {
-                "name": "Mero 1g",
-                "price": 850
-            }
-        ]
-    },
-    {
-        "brand_name": "Doxy-1 LDR",
-        "generic_name": "Doxycycline",
-        "purpose": "Acne and Bacterial infections",
-        "alternatives": [
-            {
-                "name": "Microdox",
-                "price": 60
-            }
-        ]
-    },
-    {
-        "brand_name": "Clindac-A",
-        "generic_name": "Clindamycin",
-        "purpose": "Severe Acne",
-        "alternatives": [
-            {
-                "name": "ClearGel",
-                "price": 140
-            }
-        ]
-    },
-    {
-        "brand_name": "Skinlite",
-        "generic_name": "Hydroquinone + Tretinoin",
-        "purpose": "Melasma/Dark Spots",
-        "alternatives": [
-            {
-                "name": "Melacare",
-                "price": 160
-            }
-        ]
-    },
-    {
-        "brand_name": "Betnovate-N",
-        "generic_name": "Betamethasone + Neomycin",
-        "purpose": "Skin Inflammation/Infection",
-        "alternatives": [
-            {
-                "name": "Betamil-N",
-                "price": 35
-            }
-        ]
-    },
-    {
-        "brand_name": "Fourderm",
-        "generic_name": "Chlorhexidine + Mometasone",
-        "purpose": "Fungal Skin Infection",
-        "alternatives": [
-            {
-                "name": "Quadriderm",
-                "price": 85
-            }
-        ]
-    },
-    {
-        "brand_name": "Itaspor 100",
-        "generic_name": "Itraconazole",
-        "purpose": "Fungal Infections",
-        "alternatives": [
-            {
-                "name": "Kanditral 100",
-                "price": 110
-            }
-        ]
-    },
-    {
-        "brand_name": "Lulifin",
-        "generic_name": "Luliconazole",
-        "purpose": "Ringworm/Skin Fungus",
-        "alternatives": [
-            {
-                "name": "Lulican",
-                "price": 190
-            }
-        ]
-    },
-    {
-        "brand_name": "Candid Mouth Paint",
-        "generic_name": "Clotrimazole",
-        "purpose": "Oral Thrush",
-        "alternatives": [
-            {
-                "name": "Surfaz",
-                "price": 60
-            }
-        ]
-    },
-    {
-        "brand_name": "Otrivin Adult",
-        "generic_name": "Xylometazoline",
-        "purpose": "Nasal Congestion",
-        "alternatives": [
-            {
-                "name": "Nasivion",
-                "price": 75
-            }
-        ]
-    },
-    {
-        "brand_name": "Sinarest",
-        "generic_name": "Paracetamol + CP + Phenylephrine",
-        "purpose": "Flu and Sinus pressure",
-        "alternatives": [
-            {
-                "name": "Febrex Plus",
-                "price": 55
-            }
-        ]
-    },
-    {
-        "brand_name": "Chericof",
-        "generic_name": "Dextromethorphan + CP",
-        "purpose": "Dry Cough relief",
-        "alternatives": [
-            {
-                "name": "Cofryl",
-                "price": 85
-            }
-        ]
-    },
-    {
-        "brand_name": "T-Bact",
-        "generic_name": "Mupirocin",
-        "purpose": "Bacterial Skin Ointment",
-        "alternatives": [
-            {
-                "name": "Mupimet",
-                "price": 110
-            }
-        ]
-    },
-    {
-        "brand_name": "Soframycin",
-        "generic_name": "Framycetin",
-        "purpose": "Minor Cuts and Burns",
-        "alternatives": [
-            {
-                "name": "Framic",
-                "price": 40
-            }
-        ]
-    },
-    {
-        "brand_name": "Refresh Tears",
-        "generic_name": "Carboxymethylcellulose",
-        "purpose": "Dry Eyes",
-        "alternatives": [
-            {
-                "name": "EcoTears",
-                "price": 120
-            }
-        ]
-    },
-    {
-        "brand_name": "Ciplox Eye Drops",
-        "generic_name": "Ciprofloxacin",
-        "purpose": "Eye Infection",
-        "alternatives": [
-            {
-                "name": "Zoxan",
-                "price": 18
-            }
-        ]
-    },
-    {
-        "brand_name": "Tobrastar",
-        "generic_name": "Tobramycin",
-        "purpose": "Bacterial Eye infection",
-        "alternatives": [
-            {
-                "name": "Toba",
-                "price": 45
-            }
-        ]
-    },
-    {
-        "brand_name": "Brimocom",
-        "generic_name": "Brimonidine + Timolol",
-        "purpose": "Glaucoma",
-        "alternatives": [
-            {
-                "name": "Briopt",
-                "price": 350
-            }
-        ]
-    },
-    {
-        "brand_name": "Zolpidem 10",
-        "generic_name": "Zolpidem",
-        "purpose": "Insomnia (Sleep)",
-        "alternatives": [
-            {
-                "name": "Zolfresh",
-                "price": 75
-            }
-        ]
-    },
-    {
-        "brand_name": "Etilaam 0.5",
-        "generic_name": "Etizolam",
-        "purpose": "Anxiety and Panic",
-        "alternatives": [
-            {
-                "name": "Etizola",
-                "price": 60
-            }
-        ]
-    },
-    {
-        "brand_name": "Nexito 10",
-        "generic_name": "Escitalopram",
-        "purpose": "Depression/Anxiety",
-        "alternatives": [
-            {
-                "name": "Citalin 10",
-                "price": 65
-            },
-            {
-                "name": "Newcita 10",
-                "price": 60
-            }
-        ]
-    },
-    {
-        "brand_name": "Lonazep 0.5",
-        "generic_name": "Clonazepam",
-        "purpose": "Seizures/Panic disorder",
-        "alternatives": [
-            {
-                "name": "Petril 0.5",
-                "price": 40
-            }
-        ]
-    },
-    {
-        "brand_name": "Urimax 0.4",
-        "generic_name": "Tamsulosin",
-        "purpose": "Prostate Enlargement (BPH)",
-        "alternatives": [
-            {
-                "name": "Dynapres",
-                "price": 150
-            }
-        ]
-    },
-    {
-        "brand_name": "Sildenafil 50",
-        "generic_name": "Sildenafil",
-        "purpose": "Erectile Dysfunction",
-        "alternatives": [
-            {
-                "name": "Manforce 50",
-                "price": 35
-            },
-            {
-                "name": "Suhagra 50",
-                "price": 30
-            }
-        ]
-    },
-    {
-        "brand_name": "Drotin-M",
-        "generic_name": "Drotaverine + Mefenamic Acid",
-        "purpose": "Abdominal Cramps",
-        "alternatives": [
-            {
-                "name": "Spasmonil Plus",
-                "price": 65
-            }
-        ]
-    },
-    {
-        "brand_name": "Cyclopam",
-        "generic_name": "Dicyclomine + Paracetamol",
-        "purpose": "Stomach Pain/Colic",
-        "alternatives": [
-            {
-                "name": "Spasmo-Proxyvon",
-                "price": 45
-            }
-        ]
+        "brand_name":  "Augmentin 625",
+        "generic_name":  "Amoxicillin + Clavulanic Acid",
+        "purpose":  "Bacterial infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Amoxyclav 625",
+                                 "price":  95
+                             },
+                             {
+                                 "name":  "Moxikind-CV",
+                                 "price":  105
+                             }
+                         ],
+        "brand_price":  175
+    },
+    {
+        "brand_name":  "Dolo 650",
+        "generic_name":  "Paracetamol",
+        "purpose":  "Fever and Pain",
+        "alternatives":  [
+                             {
+                                 "name":  "Paracip 650",
+                                 "price":  15
+                             },
+                             {
+                                 "name":  "Crocin 650",
+                                 "price":  18
+                             }
+                         ],
+        "brand_price":  30
+    },
+    {
+        "brand_name":  "Pantop 40",
+        "generic_name":  "Pantoprazole",
+        "purpose":  "Acidity and Heartburn",
+        "alternatives":  [
+                             {
+                                 "name":  "Pan 40",
+                                 "price":  60
+                             },
+                             {
+                                 "name":  "Pantaloc",
+                                 "price":  55
+                             }
+                         ],
+        "brand_price":  100
+    },
+    {
+        "brand_name":  "Pan-D",
+        "generic_name":  "Pantoprazole + Domperidone",
+        "purpose":  "Acid Reflux and Nausea",
+        "alternatives":  [
+                             {
+                                 "name":  "Dompan",
+                                 "price":  85
+                             },
+                             {
+                                 "name":  "Pantosec-D",
+                                 "price":  90
+                             }
+                         ],
+        "brand_price":  150
+    },
+    {
+        "brand_name":  "Zifi 200",
+        "generic_name":  "Cefixime",
+        "purpose":  "Bacterial infections (Typhoid/UTI)",
+        "alternatives":  [
+                             {
+                                 "name":  "Taxim-O 200",
+                                 "price":  75
+                             },
+                             {
+                                 "name":  "Ceptra 200",
+                                 "price":  80
+                             }
+                         ],
+        "brand_price":  135
+    },
+    {
+        "brand_name":  "Azithral 500",
+        "generic_name":  "Azithromycin",
+        "purpose":  "Respiratory infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Azee 500",
+                                 "price":  70
+                             },
+                             {
+                                 "name":  "Azicip 500",
+                                 "price":  72
+                             }
+                         ],
+        "brand_price":  120
+    },
+    {
+        "brand_name":  "Limcee",
+        "generic_name":  "Vitamin C",
+        "purpose":  "Immunity booster",
+        "alternatives":  [
+                             {
+                                 "name":  "Celin",
+                                 "price":  15
+                             }
+                         ],
+        "brand_price":  25
+    },
+    {
+        "brand_name":  "Telma 40",
+        "generic_name":  "Telmisartan",
+        "purpose":  "High Blood Pressure",
+        "alternatives":  [
+                             {
+                                 "name":  "Telmikind 40",
+                                 "price":  35
+                             },
+                             {
+                                 "name":  "Telsar 40",
+                                 "price":  40
+                             }
+                         ],
+        "brand_price":  70
+    },
+    {
+        "brand_name":  "Glycomet 500",
+        "generic_name":  "Metformin",
+        "purpose":  "Type 2 Diabetes",
+        "alternatives":  [
+                             {
+                                 "name":  "Metsmall 500",
+                                 "price":  12
+                             },
+                             {
+                                 "name":  "Obimet 500",
+                                 "price":  14
+                             }
+                         ],
+        "brand_price":  25
+    },
+    {
+        "brand_name":  "Combiflam",
+        "generic_name":  "Ibuprofen + Paracetamol",
+        "purpose":  "Muscle pain and Inflammation",
+        "alternatives":  [
+                             {
+                                 "name":  "Ibugesic Plus",
+                                 "price":  25
+                             }
+                         ],
+        "brand_price":  45
+    },
+    {
+        "brand_name":  "Montair LC",
+        "generic_name":  "Montelukast + Levocetirizine",
+        "purpose":  "Allergies and Asthma",
+        "alternatives":  [
+                             {
+                                 "name":  "Telekast L",
+                                 "price":  110
+                             },
+                             {
+                                 "name":  "Monticope",
+                                 "price":  95
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Shelcal 500",
+        "generic_name":  "Calcium + Vitamin D3",
+        "purpose":  "Bone health",
+        "alternatives":  [
+                             {
+                                 "name":  "Gemcal",
+                                 "price":  75
+                             }
+                         ],
+        "brand_price":  125
+    },
+    {
+        "brand_name":  "Becosules",
+        "generic_name":  "Vitamin B Complex",
+        "purpose":  "Nutritional deficiency",
+        "alternatives":  [
+                             {
+                                 "name":  "B-Complex",
+                                 "price":  30
+                             }
+                         ],
+        "brand_price":  50
+    },
+    {
+        "brand_name":  "Voveran SR 100",
+        "generic_name":  "Diclofenac",
+        "purpose":  "Severe Pain/Arthritis",
+        "alternatives":  [
+                             {
+                                 "name":  "Diclogesic",
+                                 "price":  45
+                             }
+                         ],
+        "brand_price":  75
+    },
+    {
+        "brand_name":  "Amoxyclav 625",
+        "generic_name":  "Amoxicillin + Clavulanic Acid",
+        "purpose":  "Bacterial infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Advent 625",
+                                 "price":  110
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Okacet",
+        "generic_name":  "Cetirizine",
+        "purpose":  "Cold and Allergy",
+        "alternatives":  [
+                             {
+                                 "name":  "Zyrtec",
+                                 "price":  18
+                             }
+                         ],
+        "brand_price":  30
+    },
+    {
+        "brand_name":  "Allegra 120",
+        "generic_name":  "Fexofenadine",
+        "purpose":  "Seasonal Allergies",
+        "alternatives":  [
+                             {
+                                 "name":  "Fexigra 120",
+                                 "price":  85
+                             }
+                         ],
+        "brand_price":  145
+    },
+    {
+        "brand_name":  "Wikoryl",
+        "generic_name":  "Phenylephrine + CP + Paracetamol",
+        "purpose":  "Common Cold",
+        "alternatives":  [
+                             {
+                                 "name":  "Solvin Cold",
+                                 "price":  45
+                             }
+                         ],
+        "brand_price":  75
+    },
+    {
+        "brand_name":  "Digene",
+        "generic_name":  "Antacids",
+        "purpose":  "Stomach gas and acidity",
+        "alternatives":  [
+                             {
+                                 "name":  "Gelusil",
+                                 "price":  15
+                             }
+                         ],
+        "brand_price":  25
+    },
+    {
+        "brand_name":  "Clavam 625",
+        "generic_name":  "Amoxicillin + Clavulanic Acid",
+        "purpose":  "Bacterial infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Moxforce CV",
+                                 "price":  99
+                             }
+                         ],
+        "brand_price":  165
+    },
+    {
+        "brand_name":  "Omez 20",
+        "generic_name":  "Omeprazole",
+        "purpose":  "Heartburn",
+        "alternatives":  [
+                             {
+                                 "name":  "Omee",
+                                 "price":  35
+                             }
+                         ],
+        "brand_price":  60
+    },
+    {
+        "brand_name":  "Taxim-O 200",
+        "generic_name":  "Cefixime",
+        "purpose":  "Bacterial infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Zifi 200",
+                                 "price":  85
+                             }
+                         ],
+        "brand_price":  145
+    },
+    {
+        "brand_name":  "Atorva 10",
+        "generic_name":  "Atorvastatin",
+        "purpose":  "High Cholesterol",
+        "alternatives":  [
+                             {
+                                 "name":  "Lipikind 10",
+                                 "price":  45
+                             },
+                             {
+                                 "name":  "Tonact 10",
+                                 "price":  50
+                             }
+                         ],
+        "brand_price":  85
+    },
+    {
+        "brand_name":  "Clexane",
+        "generic_name":  "Enoxaparin",
+        "purpose":  "Blood Clots",
+        "alternatives":  [
+                             {
+                                 "name":  "Lupisulin",
+                                 "price":  450
+                             }
+                         ],
+        "brand_price":  745
+    },
+    {
+        "brand_name":  "Jalra M 50/500",
+        "generic_name":  "Vildagliptin + Metformin",
+        "purpose":  "Diabetes",
+        "alternatives":  [
+                             {
+                                 "name":  "Galvus Met",
+                                 "price":  180
+                             }
+                         ],
+        "brand_price":  300
+    },
+    {
+        "brand_name":  "Arkamin",
+        "generic_name":  "Clonidine",
+        "purpose":  "Hypertension",
+        "alternatives":  [
+                             {
+                                 "name":  "Clonitrex",
+                                 "price":  40
+                             }
+                         ],
+        "brand_price":  70
+    },
+    {
+        "brand_name":  "Ecosprin 75",
+        "generic_name":  "Aspirin",
+        "purpose":  "Prevention of Heart Attack",
+        "alternatives":  [
+                             {
+                                 "name":  "Asat-75",
+                                 "price":  5
+                             }
+                         ],
+        "brand_price":  10
+    },
+    {
+        "brand_name":  "Metosartan 50",
+        "generic_name":  "Telmisartan + Metoprolol",
+        "purpose":  "Blood Pressure",
+        "alternatives":  [
+                             {
+                                 "name":  "Telma AM",
+                                 "price":  90
+                             }
+                         ],
+        "brand_price":  150
+    },
+    {
+        "brand_name":  "Glimisave M2",
+        "generic_name":  "Glimepiride + Metformin",
+        "purpose":  "Diabetes",
+        "alternatives":  [
+                             {
+                                 "name":  "GP2",
+                                 "price":  65
+                             }
+                         ],
+        "brand_price":  110
+    },
+    {
+        "brand_name":  "Cipox 500",
+        "generic_name":  "Ciprofloxacin",
+        "purpose":  "Bacterial infection",
+        "alternatives":  [
+                             {
+                                 "name":  "Ciplox 500",
+                                 "price":  40
+                             }
+                         ],
+        "brand_price":  70
+    },
+    {
+        "brand_name":  "Levipil 500",
+        "generic_name":  "Levetiracetam",
+        "purpose":  "Epilepsy/Seizures",
+        "alternatives":  [
+                             {
+                                 "name":  "Levera 500",
+                                 "price":  110
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Meftal-Spas",
+        "generic_name":  "Mefenamic Acid + Dicyclomine",
+        "purpose":  "Menstrual pain/Cramps",
+        "alternatives":  [
+                             {
+                                 "name":  "Cyclopam",
+                                 "price":  35
+                             }
+                         ],
+        "brand_price":  60
+    },
+    {
+        "brand_name":  "Liv.52",
+        "generic_name":  "Herbal",
+        "purpose":  "Liver health",
+        "alternatives":  [
+                             {
+                                 "name":  "Aptivate",
+                                 "price":  90
+                             }
+                         ],
+        "brand_price":  150
+    },
+    {
+        "brand_name":  "Rantac 150",
+        "generic_name":  "Ranitidine",
+        "purpose":  "Acid suppression",
+        "alternatives":  [
+                             {
+                                 "name":  "Zinetac 150",
+                                 "price":  20
+                             }
+                         ],
+        "brand_price":  35
+    },
+    {
+        "brand_name":  "Aciloc 150",
+        "generic_name":  "Ranitidine",
+        "purpose":  "Acidity",
+        "alternatives":  [
+                             {
+                                 "name":  "Rantac 150",
+                                 "price":  18
+                             }
+                         ],
+        "brand_price":  30
+    },
+    {
+        "brand_name":  "Daflon 500",
+        "generic_name":  "Diosmin",
+        "purpose":  "Varicose veins/Piles",
+        "alternatives":  [
+                             {
+                                 "name":  "Venusmin",
+                                 "price":  120
+                             }
+                         ],
+        "brand_price":  200
+    },
+    {
+        "brand_name":  "Duphaston",
+        "generic_name":  "Dydrogesterone",
+        "purpose":  "Hormonal therapy",
+        "alternatives":  [
+                             {
+                                 "name":  "Dydroboon",
+                                 "price":  450
+                             }
+                         ],
+        "brand_price":  745
+    },
+    {
+        "brand_name":  "Thyronorm 50",
+        "generic_name":  "Thyroxine",
+        "purpose":  "Hypothyroidism",
+        "alternatives":  [
+                             {
+                                 "name":  "Lethrox 50",
+                                 "price":  80
+                             }
+                         ],
+        "brand_price":  135
+    },
+    {
+        "brand_name":  "Eutirox 50",
+        "generic_name":  "Thyroxine",
+        "purpose":  "Thyroid",
+        "alternatives":  [
+                             {
+                                 "name":  "Thyronorm",
+                                 "price":  95
+                             }
+                         ],
+        "brand_price":  160
+    },
+    {
+        "brand_name":  "Folvite",
+        "generic_name":  "Folic Acid",
+        "purpose":  "Anemia/Pregnancy",
+        "alternatives":  [
+                             {
+                                 "name":  "Folicap",
+                                 "price":  25
+                             }
+                         ],
+        "brand_price":  45
+    },
+    {
+        "brand_name":  "Autrin",
+        "generic_name":  "Iron + Folic Acid",
+        "purpose":  "Iron deficiency",
+        "alternatives":  [
+                             {
+                                 "name":  "Dexorange",
+                                 "price":  140
+                             }
+                         ],
+        "brand_price":  235
+    },
+    {
+        "brand_name":  "Zevit",
+        "generic_name":  "Multivitamins",
+        "purpose":  "Daily supplement",
+        "alternatives":  [
+                             {
+                                 "name":  "Zincovit",
+                                 "price":  105
+                             }
+                         ],
+        "brand_price":  175
+    },
+    {
+        "brand_name":  "Evion 400",
+        "generic_name":  "Vitamin E",
+        "purpose":  "Skin and Hair health",
+        "alternatives":  [
+                             {
+                                 "name":  "E-Cap",
+                                 "price":  30
+                             }
+                         ],
+        "brand_price":  50
+    },
+    {
+        "brand_name":  "Calpol 500",
+        "generic_name":  "Paracetamol",
+        "purpose":  "Fever",
+        "alternatives":  [
+                             {
+                                 "name":  "Dolo 500",
+                                 "price":  12
+                             }
+                         ],
+        "brand_price":  20
+    },
+    {
+        "brand_name":  "Deriphyllin",
+        "generic_name":  "Etophylline + Theophylline",
+        "purpose":  "Asthma/COPD",
+        "alternatives":  [
+                             {
+                                 "name":  "Theobid",
+                                 "price":  40
+                             }
+                         ],
+        "brand_price":  70
+    },
+    {
+        "brand_name":  "Asthalin",
+        "generic_name":  "Salbutamol",
+        "purpose":  "Breathing difficulty",
+        "alternatives":  [
+                             {
+                                 "name":  "Salbair",
+                                 "price":  30
+                             }
+                         ],
+        "brand_price":  50
+    },
+    {
+        "brand_name":  "Ascoril LS",
+        "generic_name":  "Ambroxol + Levosalbutamol",
+        "purpose":  "Cough with mucus",
+        "alternatives":  [
+                             {
+                                 "name":  "Solvin LS",
+                                 "price":  95
+                             }
+                         ],
+        "brand_price":  160
+    },
+    {
+        "brand_name":  "Grilinctus",
+        "generic_name":  "Dextromethorphan",
+        "purpose":  "Dry Cough",
+        "alternatives":  [
+                             {
+                                 "name":  "Benadryl DR",
+                                 "price":  110
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Cremaffin",
+        "generic_name":  "Milk of Magnesia",
+        "purpose":  "Constipation",
+        "alternatives":  [
+                             {
+                                 "name":  "Laxogel",
+                                 "price":  150
+                             }
+                         ],
+        "brand_price":  250
+    },
+    {
+        "brand_name":  "Dulcolax",
+        "generic_name":  "Bisacodyl",
+        "purpose":  "Laxative",
+        "alternatives":  [
+                             {
+                                 "name":  "Gerbisa",
+                                 "price":  10
+                             }
+                         ],
+        "brand_price":  20
+    },
+    {
+        "brand_name":  "Lipitor 10",
+        "generic_name":  "Atorvastatin",
+        "purpose":  "High Cholesterol",
+        "alternatives":  [
+                             {
+                                 "name":  "Atorva 10",
+                                 "price":  45
+                             },
+                             {
+                                 "name":  "Lipikind 10",
+                                 "price":  42
+                             }
+                         ],
+        "brand_price":  75
+    },
+    {
+        "brand_name":  "Istamet 50/500",
+        "generic_name":  "Sitagliptin + Metformin",
+        "purpose":  "Type 2 Diabetes",
+        "alternatives":  [
+                             {
+                                 "name":  "Sitcom M",
+                                 "price":  160
+                             },
+                             {
+                                 "name":  "Zita-Met",
+                                 "price":  145
+                             }
+                         ],
+        "brand_price":  265
+    },
+    {
+        "brand_name":  "Januvia 100",
+        "generic_name":  "Sitagliptin",
+        "purpose":  "Blood Sugar Control",
+        "alternatives":  [
+                             {
+                                 "name":  "Zita 100",
+                                 "price":  110
+                             },
+                             {
+                                 "name":  "Sitaglo 100",
+                                 "price":  105
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Concor 5",
+        "generic_name":  "Bisoprolol",
+        "purpose":  "Hypertension/Heart Rate",
+        "alternatives":  [
+                             {
+                                 "name":  "Bisoheart 5",
+                                 "price":  45
+                             },
+                             {
+                                 "name":  "Zebeta 5",
+                                 "price":  50
+                             }
+                         ],
+        "brand_price":  85
+    },
+    {
+        "brand_name":  "Amlokind 5",
+        "generic_name":  "Amlodipine",
+        "purpose":  "Blood Pressure",
+        "alternatives":  [
+                             {
+                                 "name":  "Amlong 5",
+                                 "price":  25
+                             },
+                             {
+                                 "name":  "Stamlo 5",
+                                 "price":  28
+                             }
+                         ],
+        "brand_price":  50
+    },
+    {
+        "brand_name":  "Emanzen-D",
+        "generic_name":  "Serratiopeptidase + Diclofenac",
+        "purpose":  "Pain and Swelling",
+        "alternatives":  [
+                             {
+                                 "name":  "Serohex-D",
+                                 "price":  75
+                             },
+                             {
+                                 "name":  "Bidanzen Forte",
+                                 "price":  70
+                             }
+                         ],
+        "brand_price":  125
+    },
+    {
+        "brand_name":  "Chymoral Forte",
+        "generic_name":  "Trypsin Chymotrypsin",
+        "purpose":  "Post-surgery healing/Edema",
+        "alternatives":  [
+                             {
+                                 "name":  "Trypsin-D",
+                                 "price":  210
+                             }
+                         ],
+        "brand_price":  350
+    },
+    {
+        "brand_name":  "Kenacort 40",
+        "generic_name":  "Triamcinolone",
+        "purpose":  "Severe Allergies/Arthritis",
+        "alternatives":  [
+                             {
+                                 "name":  "Tricort 40",
+                                 "price":  120
+                             }
+                         ],
+        "brand_price":  200
+    },
+    {
+        "brand_name":  "Wysolone 10",
+        "generic_name":  "Prednisolone",
+        "purpose":  "Steroid for Inflammation",
+        "alternatives":  [
+                             {
+                                 "name":  "Predmet 10",
+                                 "price":  12
+                             }
+                         ],
+        "brand_price":  20
+    },
+    {
+        "brand_name":  "Defcort 6",
+        "generic_name":  "Deflazacort",
+        "purpose":  "Autoimmune conditions",
+        "alternatives":  [
+                             {
+                                 "name":  "Defnalone 6",
+                                 "price":  85
+                             }
+                         ],
+        "brand_price":  145
+    },
+    {
+        "brand_name":  "Atarax 25",
+        "generic_name":  "Hydroxyzine",
+        "purpose":  "Itching and Anxiety",
+        "alternatives":  [
+                             {
+                                 "name":  "Hicope 25",
+                                 "price":  45
+                             }
+                         ],
+        "brand_price":  75
+    },
+    {
+        "brand_name":  "Avil 25",
+        "generic_name":  "Pheniramine Maleate",
+        "purpose":  "Allergic reactions",
+        "alternatives":  [
+                             {
+                                 "name":  "Cadistin",
+                                 "price":  10
+                             }
+                         ],
+        "brand_price":  20
+    },
+    {
+        "brand_name":  "Stemetil 5",
+        "generic_name":  "Prochlorperazine",
+        "purpose":  "Vertigo and Vomiting",
+        "alternatives":  [
+                             {
+                                 "name":  "Vomitil",
+                                 "price":  35
+                             }
+                         ],
+        "brand_price":  60
+    },
+    {
+        "brand_name":  "Vertin 16",
+        "generic_name":  "Betahistine",
+        "purpose":  "Meniere\u0027s Disease (Dizziness)",
+        "alternatives":  [
+                             {
+                                 "name":  "Betavert 16",
+                                 "price":  80
+                             }
+                         ],
+        "brand_price":  135
+    },
+    {
+        "brand_name":  "Nexpro 40",
+        "generic_name":  "Esomeprazole",
+        "purpose":  "Severe Acid Reflux",
+        "alternatives":  [
+                             {
+                                 "name":  "Esomac 40",
+                                 "price":  95
+                             },
+                             {
+                                 "name":  "Sompraz 40",
+                                 "price":  105
+                             }
+                         ],
+        "brand_price":  175
+    },
+    {
+        "brand_name":  "Mucaine Gel",
+        "generic_name":  "Oxetacaine + Antacids",
+        "purpose":  "Stomach Ulcer pain",
+        "alternatives":  [
+                             {
+                                 "name":  "Ulsigel",
+                                 "price":  130
+                             }
+                         ],
+        "brand_price":  215
+    },
+    {
+        "brand_name":  "Duphalac",
+        "generic_name":  "Lactulose",
+        "purpose":  "Chronic Constipation",
+        "alternatives":  [
+                             {
+                                 "name":  "Looz",
+                                 "price":  180
+                             },
+                             {
+                                 "name":  "Livoluk",
+                                 "price":  170
+                             }
+                         ],
+        "brand_price":  300
+    },
+    {
+        "brand_name":  "Enterogermina",
+        "generic_name":  "Bacillus clausii",
+        "purpose":  "Probiotic for Diarrhea",
+        "alternatives":  [
+                             {
+                                 "name":  "Ecogermina",
+                                 "price":  45
+                             }
+                         ],
+        "brand_price":  75
+    },
+    {
+        "brand_name":  "Loperamide",
+        "generic_name":  "Loperamide",
+        "purpose":  "Loose Motion",
+        "alternatives":  [
+                             {
+                                 "name":  "Imodium",
+                                 "price":  20
+                             },
+                             {
+                                 "name":  "Lopamide",
+                                 "price":  15
+                             }
+                         ],
+        "brand_price":  35
+    },
+    {
+        "brand_name":  "Metrogyl 400",
+        "generic_name":  "Metronidazole",
+        "purpose":  "Stomach Infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Flagyl 400",
+                                 "price":  22
+                             }
+                         ],
+        "brand_price":  40
+    },
+    {
+        "brand_name":  "Norflox TZ",
+        "generic_name":  "Norfloxacin + Tinidazole",
+        "purpose":  "Diarrhea and Dysentery",
+        "alternatives":  [
+                             {
+                                 "name":  "Gramogyl",
+                                 "price":  75
+                             }
+                         ],
+        "brand_price":  125
+    },
+    {
+        "brand_name":  "Sporlac DS",
+        "generic_name":  "Lactic Acid Bacillus",
+        "purpose":  "Gut health",
+        "alternatives":  [
+                             {
+                                 "name":  "Lacidofil",
+                                 "price":  50
+                             }
+                         ],
+        "brand_price":  85
+    },
+    {
+        "brand_name":  "Taxim 500 Injection",
+        "generic_name":  "Cefotaxime",
+        "purpose":  "Severe Hospital Infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Lyforan",
+                                 "price":  35
+                             }
+                         ],
+        "brand_price":  60
+    },
+    {
+        "brand_name":  "Monocef 1g",
+        "generic_name":  "Ceftriaxone",
+        "purpose":  "Broad spectrum antibiotic",
+        "alternatives":  [
+                             {
+                                 "name":  "Xone 1g",
+                                 "price":  55
+                             }
+                         ],
+        "brand_price":  95
+    },
+    {
+        "brand_name":  "Meronem 1g",
+        "generic_name":  "Meropenem",
+        "purpose":  "Critical Infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Mero 1g",
+                                 "price":  850
+                             }
+                         ],
+        "brand_price":  1405
+    },
+    {
+        "brand_name":  "Doxy-1 LDR",
+        "generic_name":  "Doxycycline",
+        "purpose":  "Acne and Bacterial infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Microdox",
+                                 "price":  60
+                             }
+                         ],
+        "brand_price":  100
+    },
+    {
+        "brand_name":  "Clindac-A",
+        "generic_name":  "Clindamycin",
+        "purpose":  "Severe Acne",
+        "alternatives":  [
+                             {
+                                 "name":  "ClearGel",
+                                 "price":  140
+                             }
+                         ],
+        "brand_price":  235
+    },
+    {
+        "brand_name":  "Skinlite",
+        "generic_name":  "Hydroquinone + Tretinoin",
+        "purpose":  "Melasma/Dark Spots",
+        "alternatives":  [
+                             {
+                                 "name":  "Melacare",
+                                 "price":  160
+                             }
+                         ],
+        "brand_price":  265
+    },
+    {
+        "brand_name":  "Betnovate-N",
+        "generic_name":  "Betamethasone + Neomycin",
+        "purpose":  "Skin Inflammation/Infection",
+        "alternatives":  [
+                             {
+                                 "name":  "Betamil-N",
+                                 "price":  35
+                             }
+                         ],
+        "brand_price":  60
+    },
+    {
+        "brand_name":  "Fourderm",
+        "generic_name":  "Chlorhexidine + Mometasone",
+        "purpose":  "Fungal Skin Infection",
+        "alternatives":  [
+                             {
+                                 "name":  "Quadriderm",
+                                 "price":  85
+                             }
+                         ],
+        "brand_price":  145
+    },
+    {
+        "brand_name":  "Itaspor 100",
+        "generic_name":  "Itraconazole",
+        "purpose":  "Fungal Infections",
+        "alternatives":  [
+                             {
+                                 "name":  "Kanditral 100",
+                                 "price":  110
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Lulifin",
+        "generic_name":  "Luliconazole",
+        "purpose":  "Ringworm/Skin Fungus",
+        "alternatives":  [
+                             {
+                                 "name":  "Lulican",
+                                 "price":  190
+                             }
+                         ],
+        "brand_price":  315
+    },
+    {
+        "brand_name":  "Candid Mouth Paint",
+        "generic_name":  "Clotrimazole",
+        "purpose":  "Oral Thrush",
+        "alternatives":  [
+                             {
+                                 "name":  "Surfaz",
+                                 "price":  60
+                             }
+                         ],
+        "brand_price":  100
+    },
+    {
+        "brand_name":  "Otrivin Adult",
+        "generic_name":  "Xylometazoline",
+        "purpose":  "Nasal Congestion",
+        "alternatives":  [
+                             {
+                                 "name":  "Nasivion",
+                                 "price":  75
+                             }
+                         ],
+        "brand_price":  125
+    },
+    {
+        "brand_name":  "Sinarest",
+        "generic_name":  "Paracetamol + CP + Phenylephrine",
+        "purpose":  "Flu and Sinus pressure",
+        "alternatives":  [
+                             {
+                                 "name":  "Febrex Plus",
+                                 "price":  55
+                             }
+                         ],
+        "brand_price":  95
+    },
+    {
+        "brand_name":  "Chericof",
+        "generic_name":  "Dextromethorphan + CP",
+        "purpose":  "Dry Cough relief",
+        "alternatives":  [
+                             {
+                                 "name":  "Cofryl",
+                                 "price":  85
+                             }
+                         ],
+        "brand_price":  145
+    },
+    {
+        "brand_name":  "T-Bact",
+        "generic_name":  "Mupirocin",
+        "purpose":  "Bacterial Skin Ointment",
+        "alternatives":  [
+                             {
+                                 "name":  "Mupimet",
+                                 "price":  110
+                             }
+                         ],
+        "brand_price":  185
+    },
+    {
+        "brand_name":  "Soframycin",
+        "generic_name":  "Framycetin",
+        "purpose":  "Minor Cuts and Burns",
+        "alternatives":  [
+                             {
+                                 "name":  "Framic",
+                                 "price":  40
+                             }
+                         ],
+        "brand_price":  70
+    },
+    {
+        "brand_name":  "Refresh Tears",
+        "generic_name":  "Carboxymethylcellulose",
+        "purpose":  "Dry Eyes",
+        "alternatives":  [
+                             {
+                                 "name":  "EcoTears",
+                                 "price":  120
+                             }
+                         ],
+        "brand_price":  200
+    },
+    {
+        "brand_name":  "Ciplox Eye Drops",
+        "generic_name":  "Ciprofloxacin",
+        "purpose":  "Eye Infection",
+        "alternatives":  [
+                             {
+                                 "name":  "Zoxan",
+                                 "price":  18
+                             }
+                         ],
+        "brand_price":  30
+    },
+    {
+        "brand_name":  "Tobrastar",
+        "generic_name":  "Tobramycin",
+        "purpose":  "Bacterial Eye infection",
+        "alternatives":  [
+                             {
+                                 "name":  "Toba",
+                                 "price":  45
+                             }
+                         ],
+        "brand_price":  75
+    },
+    {
+        "brand_name":  "Brimocom",
+        "generic_name":  "Brimonidine + Timolol",
+        "purpose":  "Glaucoma",
+        "alternatives":  [
+                             {
+                                 "name":  "Briopt",
+                                 "price":  350
+                             }
+                         ],
+        "brand_price":  580
+    },
+    {
+        "brand_name":  "Zolpidem 10",
+        "generic_name":  "Zolpidem",
+        "purpose":  "Insomnia (Sleep)",
+        "alternatives":  [
+                             {
+                                 "name":  "Zolfresh",
+                                 "price":  75
+                             }
+                         ],
+        "brand_price":  125
+    },
+    {
+        "brand_name":  "Etilaam 0.5",
+        "generic_name":  "Etizolam",
+        "purpose":  "Anxiety and Panic",
+        "alternatives":  [
+                             {
+                                 "name":  "Etizola",
+                                 "price":  60
+                             }
+                         ],
+        "brand_price":  100
+    },
+    {
+        "brand_name":  "Nexito 10",
+        "generic_name":  "Escitalopram",
+        "purpose":  "Depression/Anxiety",
+        "alternatives":  [
+                             {
+                                 "name":  "Citalin 10",
+                                 "price":  65
+                             },
+                             {
+                                 "name":  "Newcita 10",
+                                 "price":  60
+                             }
+                         ],
+        "brand_price":  110
+    },
+    {
+        "brand_name":  "Lonazep 0.5",
+        "generic_name":  "Clonazepam",
+        "purpose":  "Seizures/Panic disorder",
+        "alternatives":  [
+                             {
+                                 "name":  "Petril 0.5",
+                                 "price":  40
+                             }
+                         ],
+        "brand_price":  70
+    },
+    {
+        "brand_name":  "Urimax 0.4",
+        "generic_name":  "Tamsulosin",
+        "purpose":  "Prostate Enlargement (BPH)",
+        "alternatives":  [
+                             {
+                                 "name":  "Dynapres",
+                                 "price":  150
+                             }
+                         ],
+        "brand_price":  250
+    },
+    {
+        "brand_name":  "Sildenafil 50",
+        "generic_name":  "Sildenafil",
+        "purpose":  "Erectile Dysfunction",
+        "alternatives":  [
+                             {
+                                 "name":  "Manforce 50",
+                                 "price":  35
+                             },
+                             {
+                                 "name":  "Suhagra 50",
+                                 "price":  30
+                             }
+                         ],
+        "brand_price":  60
+    },
+    {
+        "brand_name":  "Drotin-M",
+        "generic_name":  "Drotaverine + Mefenamic Acid",
+        "purpose":  "Abdominal Cramps",
+        "alternatives":  [
+                             {
+                                 "name":  "Spasmonil Plus",
+                                 "price":  65
+                             }
+                         ],
+        "brand_price":  110
+    },
+    {
+        "brand_name":  "Cyclopam",
+        "generic_name":  "Dicyclomine + Paracetamol",
+        "purpose":  "Stomach Pain/Colic",
+        "alternatives":  [
+                             {
+                                 "name":  "Spasmo-Proxyvon",
+                                 "price":  45
+                             }
+                         ],
+        "brand_price":  75
     }
 ]

@@ -1,7 +1,10 @@
+import logging
+logging.basicConfig(level=logging.DEBUG)
 import os
 import json
 import re
 from fastapi import FastAPI, UploadFile, File, HTTPException, Query
+from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import google.generativeai as genai  # Keep for now for stability, but let's fix the logic
@@ -60,13 +63,21 @@ def load_medicine_db():
         print(f"❌ ERROR: Could not load JSON: {e}")
         return []
 
+_MEDICINE_DB = None
+
+def get_medicine_db():
+    global _MEDICINE_DB
+    if _MEDICINE_DB is None:
+        _MEDICINE_DB = load_medicine_db()
+    return _MEDICINE_DB
+
 def translate_content(text, target_lang):
     if not target_lang or target_lang == "en":
         return text
     return GoogleTranslator(source='auto', target=target_lang).translate(text)
 
 def match_medicine(detected_name):
-    db = load_medicine_db()
+    db = get_medicine_db()
     if not db: return None
     brand_list = [m['brand_name'] for m in db]
     best_match, score = process.extractOne(detected_name, brand_list)
@@ -89,69 +100,132 @@ def expand_abbreviations(text: str) -> str:
 # 3. API Routes
 @app.get("/")
 def root():
-    db = load_medicine_db()
+    db = get_medicine_db()
     return {"status": "online", "database_size": len(db)}
+
+VISION_PROMPT = """
+You are an expert Indian pharmacist and medical OCR system specialising in reading handwritten Indian prescriptions.
+
+Your task: Extract ONLY medicine/drug names (with their strength if visible) from this prescription image.
+
+Rules:
+1. Look for lines that start with "Tab", "Cap", "Syr", "Inj", "Tab.", "Cap." — these mark a drug entry.
+2. Include the strength/dosage number as part of the name (e.g. "Dolo 650", "Augmentin 625", "Pan 40", "Azithral 500").
+3. Ignore everything that is NOT a medicine: patient name, doctor name, date, diagnosis, clinic name, dosage frequency (OD/BD/TDS), duration (x3 days), quantity, and instructions.
+4. If the same medicine appears more than once, include it only once.
+5. Handle common handwriting variations and OCR errors — include your best interpretation.
+6. Common Indian brand names: Dolo, Augmentin, Pan, Combiflam, Azithral, Ciplox, Calpol, Zedex, Omnacortil, Cetirizine, Montair, Allegra, Pantop, Rantac, etc.
+
+Output ONLY a valid JSON array of strings with absolutely no extra text, no markdown fences, no explanation:
+["Brand Name 1", "Brand Name 2"]
+
+If the image is illegible or no medicines are found, return exactly: []
+"""
+
+def build_image_part(image_bytes: bytes, content_type: str):
+    mime_type = content_type if content_type and content_type.startswith("image/") else "image/jpeg"
+    return {"mime_type": mime_type, "data": image_bytes}
+
+def extract_medicines_from_detected(detected_medicines, lang):
+    final_results = []
+    for med in detected_medicines:
+        match_info = match_medicine(med)
+        if match_info:
+            processed_data = {
+                "brand_name": match_info["brand_name"],
+                "brand_price": match_info.get("brand_price"),
+                "generic_name": match_info["generic_name"],
+                "purpose": translate_content(expand_abbreviations(match_info["purpose"]), lang),
+                "alternatives": match_info["alternatives"]
+            }
+            final_results.append({"detected_as": med, "status": "found", "data": processed_data})
+        else:
+            final_results.append({"detected_as": med, "status": "not_in_db"})
+    return final_results
 
 @app.post("/analyze")
 async def analyze_prescription(file: UploadFile = File(...), lang: str = Query("en")):
     try:
         image_bytes = await file.read()
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        
-        prompt = """
-        Extract medicine brand names and strengths (e.g., 'Dolo 650') from this image.
-        Format as a JSON array of strings: ["Name 1", "Name 2"].
-        If illegible, return []. 
-        """
+        mime_type = file.content_type or "image/jpeg"
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         response = model.generate_content([
-            prompt, 
-            {"mime_type": "image/jpeg", "data": image_bytes}
+            VISION_PROMPT,
+            build_image_part(image_bytes, mime_type)
         ])
         
         cleaned_text = re.sub(r'```json|```', '', response.text).strip()
         detected_medicines = json.loads(cleaned_text)
-        
-        final_results = []
-        for med in detected_medicines:
-            match_info = match_medicine(med)
-            if match_info:
-                processed_data = {
-                    "brand_name": match_info["brand_name"],
-                    "generic_name": match_info["generic_name"],
-                    "purpose": translate_content(expand_abbreviations(match_info["purpose"]), lang),
-                    "alternatives": match_info["alternatives"]
-                }
-                final_results.append({"detected_as": med, "status": "found", "data": processed_data})
-            else:
-                final_results.append({"detected_as": med, "status": "not_in_db"})
+        final_results = extract_medicines_from_detected(detected_medicines, lang)
 
         return {"success": True, "language": lang, "results": final_results}
 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
+class TextBody(BaseModel):
+    text: str
+
+@app.post("/analyze-text")
+async def analyze_text_prescription(body: TextBody, lang: str = Query("en")):
+    try:
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        prompt = f"""
+You are an expert Indian pharmacist extracting medicine names from prescription text.
+
+Prescription text:
+{body.text}
+
+Extract ONLY medicine/drug brand names with their strength (e.g. "Dolo 650", "Augmentin 625").
+Ignore dosage frequency, duration, patient details, and instructions.
+
+Output ONLY a valid JSON array of strings with no extra text:
+["Brand Name 1", "Brand Name 2"]
+
+If no medicines are found, return exactly: []
+"""
+        response = model.generate_content(prompt)
+        cleaned_text = re.sub(r'```json|```', '', response.text).strip()
+        detected_medicines = json.loads(cleaned_text)
+        final_results = extract_medicines_from_detected(detected_medicines, lang)
+
+        return {"success": True, "language": lang, "results": final_results}
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
+    
 @app.post("/simplify")
 async def simplify_medicines(body: dict, lang: str = Query("en")):
     medicines = body.get("medicines", [])
     results = []
     for med in medicines:
+        dosage_note = expand_abbreviations(med.get('raw_text', 'as prescribed'))
         prompt = f"""
-You are a patient-friendly medical assistant.
-Given this medicine info, generate simple patient instructions.
+You are MediClear, a compassionate patient-education assistant helping Indian patients understand their prescriptions.
 
-Medicine: {med['brand_name']}
-Generic: {med['generic_name']}
-Purpose: {med['purpose']}
-Dosage info from prescription: {expand_abbreviations(med.get('raw_text', ''))}
+The patient has been prescribed the following medicine. Write simple, clear instructions that even a non-medical person can understand.
 
-Output ONLY a JSON object with these keys:
-- purpose_simple: one sentence in plain language
-- how_to_take: list of 2-3 bullet points
-- warnings: one important note
-- duration: if mentioned, else "as prescribed"
+Medicine (Brand): {med['brand_name']}
+Generic Name: {med['generic_name']}
+Medical Purpose: {med['purpose']}
+Prescription note: {dosage_note}
+
+Generate ONLY a valid JSON object (no markdown, no extra text, no code fences) with these exact keys:
+{{
+  "purpose_simple": "One clear sentence explaining what this medicine does and why the doctor prescribed it",
+  "how_to_take": ["When and how to take it (e.g. morning and night)", "Whether to take with food or on empty stomach", "How long to continue (if known from prescription note)"],
+  "warnings": "One specific safety warning relevant to this medicine (e.g. avoid alcohol, don't crush tablet, watch for drowsiness)",
+  "duration": "Duration extracted from the prescription note, or 'As prescribed by your doctor'"
+}}
+
+Write in simple English. Avoid medical jargon. Be specific to this medicine's actual use.
 """
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
         cleaned = re.sub(r'```json|```', '', response.text).strip()
         instructions = json.loads(cleaned)
