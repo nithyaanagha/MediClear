@@ -1,3 +1,5 @@
+import logging
+logging.basicConfig(level=logging.DEBUG)
 import os
 import json
 import re
@@ -96,7 +98,7 @@ def root():
 async def analyze_prescription(file: UploadFile = File(...), lang: str = Query("en")):
     try:
         image_bytes = await file.read()
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         prompt = """
         Extract medicine brand names and strengths (e.g., 'Dolo 650') from this image.
@@ -129,8 +131,10 @@ async def analyze_prescription(file: UploadFile = File(...), lang: str = Query("
         return {"success": True, "language": lang, "results": final_results}
 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
-
+    
 @app.post("/simplify")
 async def simplify_medicines(body: dict, lang: str = Query("en")):
     medicines = body.get("medicines", [])
@@ -151,7 +155,7 @@ Output ONLY a JSON object with these keys:
 - warnings: one important note
 - duration: if mentioned, else "as prescribed"
 """
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
         cleaned = re.sub(r'```json|```', '', response.text).strip()
         instructions = json.loads(cleaned)
