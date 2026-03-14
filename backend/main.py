@@ -6,12 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import google.generativeai as genai  # Keep for now for stability, but let's fix the logic
 from fuzzywuzzy import process
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 
 # 1. Setup & Config
 load_dotenv()
 app = FastAPI() 
-translator = Translator()
 
 # Enable CORS for Frontend communication
 app.add_middleware(
@@ -64,11 +63,7 @@ def load_medicine_db():
 def translate_content(text, target_lang):
     if not target_lang or target_lang == "en":
         return text
-    try:
-        translated = translator.translate(text, dest=target_lang)
-        return translated.text
-    except Exception:
-        return text
+    return GoogleTranslator(source='auto', target=target_lang).translate(text)
 
 def match_medicine(detected_name):
     db = load_medicine_db()
@@ -78,6 +73,18 @@ def match_medicine(detected_name):
     if score > 70:
         return next(item for item in db if item['brand_name'] == best_match)
     return None
+
+ABBREV_MAP = {
+    "OD": "once daily", "BD": "twice daily", "TDS": "three times a day",
+    "QID": "four times a day", "HS": "at bedtime", "SOS": "when needed",
+    "STAT": "immediately", "AC": "before meals", "PC": "after meals",
+    "Tab": "Tablet", "Cap": "Capsule", "Syr": "Syrup", "Inj": "Injection"
+}
+
+def expand_abbreviations(text: str) -> str:
+    for abbr, full in ABBREV_MAP.items():
+        text = re.sub(rf'\b{abbr}\b', full, text, flags=re.IGNORECASE)
+    return text
 
 # 3. API Routes
 @app.get("/")
@@ -112,7 +119,7 @@ async def analyze_prescription(file: UploadFile = File(...), lang: str = Query("
                 processed_data = {
                     "brand_name": match_info["brand_name"],
                     "generic_name": match_info["generic_name"],
-                    "purpose": translate_content(match_info["purpose"], lang),
+                    "purpose": translate_content(expand_abbreviations(match_info["purpose"]), lang),
                     "alternatives": match_info["alternatives"]
                 }
                 final_results.append({"detected_as": med, "status": "found", "data": processed_data})
@@ -123,6 +130,37 @@ async def analyze_prescription(file: UploadFile = File(...), lang: str = Query("
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/simplify")
+async def simplify_medicines(body: dict, lang: str = Query("en")):
+    medicines = body.get("medicines", [])
+    results = []
+    for med in medicines:
+        prompt = f"""
+You are a patient-friendly medical assistant.
+Given this medicine info, generate simple patient instructions.
+
+Medicine: {med['brand_name']}
+Generic: {med['generic_name']}
+Purpose: {med['purpose']}
+Dosage info from prescription: {expand_abbreviations(med.get('raw_text', ''))}
+
+Output ONLY a JSON object with these keys:
+- purpose_simple: one sentence in plain language
+- how_to_take: list of 2-3 bullet points
+- warnings: one important note
+- duration: if mentioned, else "as prescribed"
+"""
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
+        cleaned = re.sub(r'```json|```', '', response.text).strip()
+        instructions = json.loads(cleaned)
+        instructions['brand_name'] = med['brand_name']
+        instructions['translated'] = translate_content(
+            instructions['purpose_simple'], lang
+        )
+        results.append(instructions)
+    return {"success": True, "instructions": results}
 
 # 4. Corrected Execution for Windows
 if __name__ == "__main__":

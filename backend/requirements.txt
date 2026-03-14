@@ -1,8 +1,8 @@
-fastapi
-uvicorn
-google-generativeai
-python-dotenv
-python-multipart
-fuzzywuzzy
-python-levenshtein
-googletrans
+fastapi==0.111.0
+uvicorn==0.30.0
+google-generativeai==0.7.2
+python-dotenv==1.0.1
+python-multipart==0.0.9
+fuzzywuzzy==0.18.0
+python-levenshtein==0.25.1
+deep-translator==1.11.4
